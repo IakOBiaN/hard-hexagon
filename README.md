@@ -3,7 +3,7 @@ The Python implementation of an exact solution for the hard hexagon model, propo
 
 ## Description
 
-A schematic representation of the model is shown in the figure. Alternatively, the model can be formulated as a model of hard disks of size <img src="images/disk_formula.png" height="19" /> and on a triangular lattice, where <i>d</i> is hard disk diameter and <i>a</i> is lattice spacing.
+A schematic representation of the model is shown in the figure. Alternatively, the model can be formulated as a model of hard disks of size <img src="images/disk_formula.png" height="19" /> on a triangular lattice, where <i>d</i> is hard disk diameter and <i>a</i> is lattice spacing.
 
 <p align="center"><img src="images/hardhex.png" width="500" /></p>
 
