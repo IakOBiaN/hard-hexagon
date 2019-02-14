@@ -5,7 +5,7 @@ The Python implementation of an exact solution for the hard hexagon model, propo
 
 A schematic representation of the model is shown in the figure. Alternatively, the model can be formulated as a model of hard disks of size <img src="images/disk_formula.png" height="19" /> on a triangular lattice, where <i>d</i> is a hard disk diameter and <i>a</i> is a lattice spacing.
 
-<p align="center"><img src="images/hardhex.png" width="500" /></p>
+<p align="center"><img src="images/hardhex.png" width="600" /></p>
 
 The hard hexagon model occurs within the framework of the grand canonical ensemble, where the total number of particles (the "hexagons") is allowed to vary naturally, and is fixed by a chemical potential. In the hard hexagon model, all valid states have zero energy, and so the only important thermodynamic control variable is the ratio of chemical potential to temperature <i>µ/(kT)</i>. The exponential of this ratio, <i>z = exp(µ/(kT))</i> is called the activity and larger values correspond roughly to denser configurations.
 
