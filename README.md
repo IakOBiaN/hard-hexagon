@@ -21,15 +21,22 @@ so that log(κ) is the free energy per unit site. Solving the hard hexagon model
 
 ## Solution
 
-The solution is different for the areas before and after the critical point. For Z less than critical:
+The solution is different for the areas before and after the critical point. For <i>z</i> less than critical:
 
 <img src="images/z_formula_less.svg" />
 <img src="images/k_formula_less.svg" />
 <img src="images/rho_formula_less.svg" />
 
-For Z more than critical the solution is given by:
+For <i>z</i> more than critical the solution is given by:
 
 <img src="images/z_formula_more.svg" />
 <img src="images/k_formula_more.svg" />
 <img src="images/rho1_formula_more.svg" />
 <img src="images/rho23_formula_more.svg" />
+
+,where
+
+<img src="images/G_formula.svg" />
+<img src="images/H_formula.svg" />
+<img src="images/P_formula.svg" />
+<img src="images/Q_formula.svg" />
