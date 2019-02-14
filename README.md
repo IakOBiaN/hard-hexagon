@@ -11,4 +11,4 @@ The hard hexagon model occurs within the framework of the grand canonical ensemb
 
 For a triangular lattice with N sites, the grand partition function is 
 
-<img src="images/partition_formula.svg />
+<img src="images/partition_formula.svg" />
