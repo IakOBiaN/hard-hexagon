@@ -11,11 +11,11 @@ The hard hexagon model occurs within the framework of the grand canonical ensemb
 
 For a triangular lattice with N sites, the grand partition function is 
 
-<img src="images/partition_formula.svg" />
+<img src="images/partition_formula.png" />
 
 where g(n, N) is the number of ways of placing n particles on distinct lattice sites such that no 2 are adjacent. The function κ is defined by 
 
-<img src="images/k_formula.svg" />
+<img src="images/k_formula.png" />
 
 so that log(κ) is the free energy per unit site. Solving the hard hexagon model means (roughly) finding an exact expression for κ as a function of z.
 
@@ -23,20 +23,20 @@ so that log(κ) is the free energy per unit site. Solving the hard hexagon model
 
 The solution is different for the areas before and after the critical point. For <i>z</i> less than critical:
 
-<img src="images/z_formula_less.svg" />
-<img src="images/k_formula_less.svg" />
-<img src="images/rho_formula_less.svg" />
+<img src="images/z_formula_less.png" />
+<img src="images/k_formula_less.png" />
+<img src="images/rho_formula_less.png" />
 
 For <i>z</i> more than critical the solution is given by:
 
-<img src="images/z_formula_more.svg" />
-<img src="images/k_formula_more.svg" />
-<img src="images/rho1_formula_more.svg" />
-<img src="images/rho23_formula_more.svg" />
+<img src="images/z_formula_more.png" />
+<img src="images/k_formula_more.png" />
+<img src="images/rho1_formula_more.png" />
+<img src="images/rho23_formula_more.png" />
 
 ,where
 
-<img src="images/G_formula.svg" />
-<img src="images/H_formula.svg" />
-<img src="images/P_formula.svg" />
-<img src="images/Q_formula.svg" />
+<img src="images/G_formula.png" />
+<img src="images/H_formula.png" />
+<img src="images/P_formula.png" />
+<img src="images/Q_formula.png" />
