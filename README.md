@@ -4,7 +4,7 @@ The Python implementation of an exact solution for the hard hexagon model, propo
 
 ## Description
 
-A schematic representation of the model is shown in the figure. Alternatively, the model can be formulated as a model of hard disks of size <img src="images/disk_formula.png" height="19" /> on a triangular lattice, where <i>d</i> is a hard disk diameter and <i>a</i> is a lattice spacing.
+A schematic representation of the model is shown in the figure. Alternatively, the model can be formulated as a model of hard disks of size $a < d \le \sqrt{3}\,a$ on a triangular lattice, where <i>d</i> is a hard disk diameter and <i>a</i> is a lattice spacing.
 
 <p align="center"><img src="images/hardhex.png" width="600" /></p>
 
@@ -12,11 +12,11 @@ The hard hexagon model occurs within the framework of the grand canonical ensemb
 
 For a triangular lattice with N sites, the grand partition function is
 
-<img src="images/partition_formula.png" />
+$$\mathcal{Z}(z) = \sum_n z^n\, g(n, N) = 1 + Nz + \frac{1}{2} N(N - 7) z^2 + \cdots$$
 
 where g(n, N) is the number of ways of placing n particles on distinct lattice sites such that no 2 are adjacent. The function kappa is defined by
 
-<img src="images/k_formula.png" />
+$$\kappa(z) = \lim_{N \to \infty} \mathcal{Z}(z)^{1/N} = 1 + z - 3z^2 + \cdots$$
 
 so that log(kappa) is the free energy per unit site. Solving the hard hexagon model means (roughly) finding an exact expression for kappa as a function of z.
 
@@ -24,23 +24,31 @@ so that log(kappa) is the free energy per unit site. Solving the hard hexagon mo
 
 The solution is different for the areas before and after the critical point. For <i>z</i> less than critical:
 
-<img src="images/z_formula_less.png" />
-<img src="images/k_formula_less.png" />
-<img src="images/rho_formula_less.png" />
+$$z = \frac{-x\, H(x)^5}{G(x)^5}$$
+
+$$\kappa = \frac{H(x)^3 Q(x^5)^2}{G(x)^2} \prod_{n \ge 1} \frac{(1 - x^{6n-4})(1 - x^{6n-3})^2 (1 - x^{6n-2})}{(1 - x^{6n-5})(1 - x^{6n-1})(1 - x^{6n})^2}$$
+
+$$\rho = \rho_1 = \rho_2 = \rho_3 = \frac{-x\, G(x) H(x^6) P(x^3)}{P(x)}$$
 
 For <i>z</i> more than critical the solution is given by:
 
-<img src="images/z_formula_more.png" />
-<img src="images/k_formula_more.png" />
-<img src="images/rho1_formula_more.png" />
-<img src="images/rho23_formula_more.png" />
+$$z = \frac{G(x)^5}{x\, H(x)^5}$$
+
+$$\kappa = x^{-1/3} \frac{G(x)^3 Q(x^5)^2}{H(x)^2} \prod_{n \ge 1} \frac{(1 - x^{3n-2})(1 - x^{3n-1})}{(1 - x^{3n})^2}$$
+
+$$\rho_1 = \frac{H(x) Q(x) \left( G(x) Q(x) + x^2 H(x^9) Q(x^9) \right)}{Q(x^3)^2}$$
+
+$$\rho_2 = \rho_3 = \frac{x^2 H(x) Q(x) H(x^9) Q(x^9)}{Q(x^3)^2}$$
 
 where
 
-<img src="images/G_formula.png" />
-<img src="images/H_formula.png" />
-<img src="images/P_formula.png" />
-<img src="images/Q_formula.png" />
+$$G(x) = \prod_{n \ge 1} \frac{1}{(1 - x^{5n-4})(1 - x^{5n-1})}$$
+
+$$H(x) = \prod_{n \ge 1} \frac{1}{(1 - x^{5n-3})(1 - x^{5n-2})}$$
+
+$$P(x) = \prod_{n \ge 1} (1 - x^{2n-1}) = Q(x) / Q(x^2)$$
+
+$$Q(x) = \prod_{n \ge 1} (1 - x^{n})$$
 
 ## Python usage
 
