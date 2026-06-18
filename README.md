@@ -76,16 +76,53 @@ The formulas are parameterized by Baxter's internal parameter `x`, while the phy
 import hardhexagon as hardhex
 
 solution = hardhex.solve_by_mu(2.437)
-print(solution.activity)
-print(solution.free_energy)
-print(solution.density)
-print(solution.parameter)  # Baxter's internal x parameter
-print(solution.phase)
+print(solution.density)      # 0.2839413924102479
+print(solution.activity)     # 11.438673197659805  (z = exp(mu))
+print(solution.free_energy)  # -0.8478466096725723  (free energy per site)
+print(solution.parameter)    # 0.2617812843639773  (Baxter's internal x)
+print(solution.phase)        # high_activity
 ```
 
-The critical activity and chemical potential are available as constants:
+`Solution` is a dataclass, so you can also print the whole record at once:
 
 ```python
-hardhex.CRITICAL_ACTIVITY
-hardhex.CRITICAL_CHEMICAL_POTENTIAL
+print(solution)
+# Solution(chemical_potential=2.437, activity=11.438673197659805,
+#          free_energy=-0.8478466096725723, density=0.2839413924102479,
+#          parameter=0.2617812843639773, phase='high_activity')
 ```
+
+The exact location of the phase transition is precomputed and exposed as read-only constants — you read them, you do not set them. They are convenient for comparing your own runs against the known critical point:
+
+```python
+print(hardhex.CRITICAL_ACTIVITY)            # 11.090169943749475  = (11 + 5*sqrt(5)) / 2
+print(hardhex.CRITICAL_CHEMICAL_POTENTIAL)  # 2.4060591252980172  = log(CRITICAL_ACTIVITY)
+```
+
+## Plotting
+
+The repository ships `plot_solution.py`, which sweeps the chemical potential over the default grid, plots the density, and marks the critical point:
+
+```python
+import matplotlib.pyplot as plt
+import hardhexagon as hardhex
+
+solutions = hardhex.get_solution()
+chemical_potential = [solution.chemical_potential for solution in solutions]
+density = [solution.density for solution in solutions]
+
+critical_mu = hardhex.CRITICAL_CHEMICAL_POTENTIAL
+critical_density = hardhex.solve_by_mu(critical_mu).density
+
+plt.plot(chemical_potential, density, label="density")
+plt.axvline(critical_mu, color="orange", linestyle="--")
+plt.plot(critical_mu, critical_density, "o", color="orange", label="critical point")
+plt.xlabel("chemical potential  $\\mu / kT$")
+plt.ylabel("density  $\\rho$")
+plt.legend()
+plt.show()
+```
+
+The density rises from the dilute gas towards the close-packed value of 1/3, with the order/disorder transition at the marked critical point:
+
+<p align="center"><img src="images/density.png" width="640" /></p>
