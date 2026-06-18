@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+title: "Baxter's exact solution for the hard hexagon model"
+message: >-
+  If you use this software, please cite it using the metadata below.
+  Please also cite the original paper by Baxter (1980), listed under
+  references, as the source of the exact solution.
+type: software
+authors:
+  - family-names: Akimenko
+    given-names: Sergey
+repository-code: "https://github.com/IakOBiaN/hard-hexagon"
+url: "https://github.com/IakOBiaN/hard-hexagon"
+license: MIT
+version: 1.0.0
+date-released: "2026-06-18"
+keywords:
+  - hard hexagon model
+  - exact solution
+  - statistical mechanics
+  - lattice gas
+  - triangular lattice
+  - Rogers-Ramanujan identities
+references:
+  - type: article
+    title: "Hard hexagons: exact solution"
+    authors:
+      - family-names: Baxter
+        given-names: "Rodney J."
+    journal: "Journal of Physics A: Mathematical and General"
+    year: 1980
+    month: 3
+    volume: 13
+    issue: 3
+    start: "L61"
+    end: "L70"
+    doi: "10.1088/0305-4470/13/3/007"
