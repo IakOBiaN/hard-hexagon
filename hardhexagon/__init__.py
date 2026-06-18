@@ -1,5 +1,34 @@
-﻿from dataclasses import dataclass
+"""Baxter's exact solution for the hard hexagon model.
+
+The hard hexagon model is a two-dimensional lattice gas on the triangular
+lattice with nearest-neighbour exclusion, solved exactly by R. J. Baxter in
+1980.  This package evaluates the exact thermodynamic quantities (activity,
+free energy and density) as functions of the chemical potential.
+
+The public entry point is :func:`solve_by_mu`; see the README for the
+underlying formulas.
+"""
+from dataclasses import dataclass
 from math import exp, isfinite, log, sqrt
+
+__version__ = "1.0.0"
+
+__all__ = [
+    "Solution",
+    "solve_by_mu",
+    "solve_by_parameter",
+    "get_solution",
+    "calculate",
+    "parameter_from_chemical_potential",
+    "G",
+    "H",
+    "P",
+    "Q",
+    "CRITICAL_ACTIVITY",
+    "CRITICAL_CHEMICAL_POTENTIAL",
+    "DEFAULT_ITERATIONS",
+    "DEFAULT_CHEMICAL_POTENTIALS",
+]
 
 DEFAULT_ITERATIONS = 1000
 DEFAULT_CHEMICAL_POTENTIALS = tuple(value / 10.0 for value in range(-80, 81))

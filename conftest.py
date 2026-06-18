@@ -1,7 +1,7 @@
 """pytest configuration for the hard hexagon test suite.
 
 Putting the repository root on ``sys.path`` lets the tests do a plain
-``import functions`` regardless of the directory pytest is invoked from.
+``import hardhexagon`` regardless of the directory pytest is invoked from.
 """
 import os
 import sys

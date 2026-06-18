@@ -1,7 +1,7 @@
 """Correctness tests for Baxter's exact hard hexagon solution.
 
 The hard hexagon model has a number of analytically known quantities that the
-implementation in :mod:`functions` must reproduce.  Each test below pins one of
+implementation in :mod:`hardhexagon` must reproduce.  Each test below pins one of
 them, so that any change to the numerics is checked against the physics rather
 than against a previously recorded output.
 
@@ -17,7 +17,7 @@ from math import exp, log, sqrt
 
 import pytest
 
-import functions as fn
+import hardhexagon as fn
 
 CRITICAL_DENSITY = (5.0 - sqrt(5.0)) / 10.0
 CLOSE_PACKING_DENSITY = 1.0 / 3.0

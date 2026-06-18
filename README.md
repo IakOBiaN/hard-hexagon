@@ -50,12 +50,30 @@ $$P(x) = \prod_{n \ge 1} (1 - x^{2n-1}) = Q(x) / Q(x^2)$$
 
 $$Q(x) = \prod_{n \ge 1} (1 - x^{n})$$
 
+## Installation
+
+The exact solution lives in the dependency-free `hardhexagon` package. Install the latest version straight from GitHub:
+
+```bash
+pip install git+https://github.com/IakOBiaN/hard-hexagon.git
+```
+
+Or clone the repository and install it in editable mode:
+
+```bash
+git clone https://github.com/IakOBiaN/hard-hexagon.git
+cd hard-hexagon
+pip install -e .
+```
+
+The core package needs only the Python standard library. Two optional extras are available: `plot` (adds matplotlib for `plot_solution.py`) and `dev` (adds pytest for the test suite) — for example, `pip install -e ".[plot,dev]"`.
+
 ## Python usage
 
 The formulas are parameterized by Baxter's internal parameter `x`, while the physically convenient input is the chemical potential `mu`. The project exposes `solve_by_mu(mu)`, which finds the matching `x` numerically and returns the thermodynamic quantities:
 
 ```python
-import functions as hardhex
+import hardhexagon as hardhex
 
 solution = hardhex.solve_by_mu(2.437)
 print(solution.activity)

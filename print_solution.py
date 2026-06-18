@@ -1,4 +1,4 @@
-import functions as fn
+import hardhexagon as fn
 
 solution = fn.get_solution()
 for result in solution:

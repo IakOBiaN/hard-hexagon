@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import functions as fn
+import hardhexagon as fn
 
 chemical_potential = []
 density = []
