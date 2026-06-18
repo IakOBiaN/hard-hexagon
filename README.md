@@ -126,3 +126,7 @@ plt.show()
 The density rises from the dilute gas towards the close-packed value of 1/3, with the order/disorder transition at the marked critical point:
 
 <p align="center"><img src="images/density.png" width="640" /></p>
+
+## License
+
+This project is released under the [MIT License](LICENSE) — free to use, modify, and distribute, including in closed-source and commercial work.
